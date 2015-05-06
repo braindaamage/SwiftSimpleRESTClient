@@ -24,7 +24,7 @@ class SwiftSimpleRestClient {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
     }
     
-    func call(method: String, route: String, data: String?, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
+    func call(method: String, route: String, data: String? = nil, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
         request.HTTPMethod = method
         request.URL = NSURL(string: baseUrl + route)
         

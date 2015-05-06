@@ -14,7 +14,7 @@ class ExampleViewController: UIViewController {
         super.viewDidLoad()
 
         var SSRC = SwiftSimpleRestClient(apiUrl: "http://10.0.1.22:3000/api/")
-        SSRC.call("GET", route: "users", data: nil) {
+        SSRC.call("GET", route: "users") {
             (data, urlResponse, error) in
             var dataString = NSString(data: data, encoding:NSUTF8StringEncoding)
             println("dataString = \(dataString!)")
