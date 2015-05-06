@@ -9,31 +9,26 @@
 import Foundation
 
 class SwiftSimpleRestClient {
-    var url : String = ""
-    let baseUrl : String
-    let request : NSMutableURLRequest = NSMutableURLRequest()
-    let session: NSURLSession = NSURLSession.sharedSession()
+    private var url : String = ""
+    private let baseUrl : String
+    private let request : NSMutableURLRequest = NSMutableURLRequest()
+    private let session: NSURLSession = NSURLSession.sharedSession()
     
     init(var apiUrl: String) {
         let endIndex = advance(apiUrl.endIndex, -1)
         if (apiUrl[endIndex] != "/") {
             apiUrl = "\(apiUrl)/"
         }
-        self.baseUrl = apiUrl
-        self.request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        self.request.addValue("application/json", forHTTPHeaderField: "Accept")
+        baseUrl = apiUrl
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
     }
     
-    func GET(var route: String, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
-        request.HTTPMethod = "GET"
-        self.url = self.baseUrl + route
-        self.call(callback)
-    }
-    
-    func call(callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
-        self.request.URL = NSURL(string: self.url)
+    func call(method: String, route: String, data: String?, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
+        request.HTTPMethod = method
+        request.URL = NSURL(string: baseUrl + route)
         
-        var task = self.session.dataTaskWithRequest(self.request) {
+        var task = session.dataTaskWithRequest(request) {
             (data, urlResponse, error) in
             dispatch_async(dispatch_get_main_queue(), {
                 () -> Void in
