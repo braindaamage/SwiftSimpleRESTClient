@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A747C8FD1AF9EE1E003388E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747C8FC1AF9EE1E003388E4 /* AppDelegate.swift */; };
-		A747C8FF1AF9EE1E003388E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747C8FE1AF9EE1E003388E4 /* ViewController.swift */; };
 		A747C9021AF9EE1E003388E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A747C9001AF9EE1E003388E4 /* Main.storyboard */; };
 		A747C9041AF9EE1E003388E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A747C9031AF9EE1E003388E4 /* Images.xcassets */; };
 		A747C9071AF9EE1E003388E4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A747C9051AF9EE1E003388E4 /* LaunchScreen.xib */; };
 		A747C9131AF9EE1E003388E4 /* SwiftSimpleRESTClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747C9121AF9EE1E003388E4 /* SwiftSimpleRESTClientTests.swift */; };
+		A747C91E1AF9EE3C003388E4 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747C91C1AF9EE3C003388E4 /* ExampleViewController.swift */; };
+		A747C91F1AF9EE3C003388E4 /* SwiftSimpleRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A747C91D1AF9EE3C003388E4 /* SwiftSimpleRestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		A747C8F71AF9EE1E003388E4 /* SwiftSimpleRESTClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSimpleRESTClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A747C8FB1AF9EE1E003388E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A747C8FC1AF9EE1E003388E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A747C8FE1AF9EE1E003388E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A747C9011AF9EE1E003388E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A747C9031AF9EE1E003388E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A747C9061AF9EE1E003388E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A747C90C1AF9EE1E003388E4 /* SwiftSimpleRESTClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSimpleRESTClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A747C9111AF9EE1E003388E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A747C9121AF9EE1E003388E4 /* SwiftSimpleRESTClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSimpleRESTClientTests.swift; sourceTree = "<group>"; };
+		A747C91C1AF9EE3C003388E4 /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		A747C91D1AF9EE3C003388E4 /* SwiftSimpleRestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSimpleRestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,8 @@
 		A747C8F91AF9EE1E003388E4 /* SwiftSimpleRESTClient */ = {
 			isa = PBXGroup;
 			children = (
-				A747C8FC1AF9EE1E003388E4 /* AppDelegate.swift */,
-				A747C8FE1AF9EE1E003388E4 /* ViewController.swift */,
-				A747C9001AF9EE1E003388E4 /* Main.storyboard */,
-				A747C9031AF9EE1E003388E4 /* Images.xcassets */,
-				A747C9051AF9EE1E003388E4 /* LaunchScreen.xib */,
+				A747C91C1AF9EE3C003388E4 /* ExampleViewController.swift */,
+				A747C91D1AF9EE3C003388E4 /* SwiftSimpleRestClient.swift */,
 				A747C8FA1AF9EE1E003388E4 /* Supporting Files */,
 			);
 			path = SwiftSimpleRESTClient;
@@ -90,6 +89,10 @@
 		A747C8FA1AF9EE1E003388E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A747C8FC1AF9EE1E003388E4 /* AppDelegate.swift */,
+				A747C9001AF9EE1E003388E4 /* Main.storyboard */,
+				A747C9031AF9EE1E003388E4 /* Images.xcassets */,
+				A747C9051AF9EE1E003388E4 /* LaunchScreen.xib */,
 				A747C8FB1AF9EE1E003388E4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A747C8FF1AF9EE1E003388E4 /* ViewController.swift in Sources */,
 				A747C8FD1AF9EE1E003388E4 /* AppDelegate.swift in Sources */,
+				A747C91F1AF9EE3C003388E4 /* SwiftSimpleRestClient.swift in Sources */,
+				A747C91E1AF9EE3C003388E4 /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
