@@ -24,9 +24,22 @@ class SwiftSimpleRestClient {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
     }
     
-    func call(method: String, route: String, data: String? = nil, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
+    func addHeader(header: String, value: String? = nil) {
+        request.addValue(value, forHTTPHeaderField: header);
+    }
+    
+    func call(method: String, route: String, data: Dictionary<String, String>? = nil, callback: (NSData!, NSURLResponse!, NSError!) -> Void) -> Void {
         request.HTTPMethod = method
         request.URL = NSURL(string: baseUrl + route)
+        
+        if let params = data {
+            var err: NSError?
+            self.request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+            
+            if (err != nil) {
+                println(err)
+            }
+        }
         
         var task = session.dataTaskWithRequest(request) {
             (data, urlResponse, error) in
